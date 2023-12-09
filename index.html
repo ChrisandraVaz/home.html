@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="landing">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </section>
+
+    <!-- W3Schools Reference -->
+    <!--
+    Code adapted from: https://www.w3schools.com/css/css_navbar.asp
+    Author: W3Schools
+    Name: HTML/CSS Nav Tutorial
+    Description: W3Schools tutorial on creating nav bar.
+    Date retrieved: December 1, 2023
+    -->
+
+    <!-- Copied code starts -->
+    <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <div class="list-container">
+            <ul>
+                <li><a href="#about">Section 1: About me</a></li>
+                <li><a href="#gallery">Section 2: Gallery</a></li>
+                <li><a href="#contact">Section 3: Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Copied code ends -->
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/child.jpg" alt="Child Image">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I'm Chrisandra, based in Toronto, Canada. A UX designer driven by
+                    iterating around problems to deliver impactful, user-centric design solutions
+                    that resonate with users. On the weekends, you can find me exploring drawing or
+                    savoring butter chicken. Beyond that, I find happiness in volunteering within
+                    my community, often contributing to design and tech for social good projects or
+                    programs. I strive to keep making a meaningful impact through embracing DEI!💛
+                </p>
+            </div>
+        </div>
+
+        <!-- W3Schools Reference -->
+        <!--
+        Code adapted from: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp
+        Author: W3Schools
+        Name: CSS Social Media Buttons
+        Description: W3Schools tutorial on creating social media buttons using CSS.
+        Date retrieved: December 1, 2023
+        -->
+
+        <!-- Copied code starts -->
+        <div id="social-buttons">
+            <a href="mailto:cgvaz@uwaterloo.com" class="outlook-button">Outlook Mail</a>
+            <a href="https://www.linkedin.com/in/chrisandra-vaz/" target="_blank" class="linkedin-button">LinkedIn</a>
+        </div>
+        <!-- Copied code ends -->
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="image-grid">
+            <img src="images/mcd1.jpg" alt="Image 1">
+            <img src="images/fish.jpg" alt="Image 2">
+            <img src="images/mcd2.jpg" alt="Image 1">
+            <img src="images/hands.jpg" alt="Image 2">
+            <img src="images/kimlight.jpg" alt="Image 1">
+            <img src="images/kimwavypeace.jpg" alt="Image 2">
+            <img src="images/meat.jpg" alt="Image 1">
+            <img src="images/alitapink.jpg" alt="Image 2">
+        </div>
+    </section>
+
+    <!-- W3Schools Reference -->
+    <!--
+    Code adapted from: https://www.w3schools.com/html/html_forms.asp
+    Author: W3Schools
+    Name: HTML Forms Tutorial
+    Description: W3Schools tutorial on creating HTML forms.
+    Date retrieved: December 1, 2023
+    -->
+
+    <!-- Copied code starts -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="#" method="post" id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+            <div id="confirmation-message"></div>
+        </form>
+    </section>
+    <!-- Copied code ends -->
+
+    <!-- JavaScript function for form submission -->
+    <!--
+    Code copied from: https://www.w3schools.com/js/js_validation.asp
+    Author: W3Schools
+    Name: JavaScript Forms Tutorial
+    Description: W3Schools tutorial on JavaScript Forms covering form validation and submission.
+    Date retrieved: [Insert Date]
+    -->
+
+    <!-- Copied code starts -->
+    <script>
+        function submitForm() {
+            document.getElementById("contact-form").reset();
+            document.getElementById("confirmation-message").innerText = "Thank you for your response!";
+        }
+    </script>
+    <!-- Copied code ends -->
+
+    <!-- JavaScript function for smooth scrolling to sections -->
+    <!--
+    Code copied from: https://www.w3schools.com/js/js_htmldom.asp
+    Author: W3Schools
+    Name: JavaScript HTML DOM Tutorial
+    Description: W3Schools tutorial on JavaScript HTML DOM, including a section on Scrolling.
+    Date retrieved: December 1, 2023
+    -->
+
+    <!-- Copied code starts -->
+    <script>
+        document.querySelectorAll("#landing a").forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
+    </script>
+    <!-- Copied code ends -->
+
+</body>
+
+</html>
